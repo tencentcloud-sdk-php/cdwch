@@ -18,28 +18,20 @@ namespace TencentCloud\Cdwch\V20200915\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeInstance请求参数结构体
+ * DescribeInstanceState请求参数结构体
  *
- * @method string getInstanceId() 获取集群实例ID
- * @method void setInstanceId(string $InstanceId) 设置集群实例ID
- * @method boolean getIsOpenApi() 获取是否是open api查询
- * @method void setIsOpenApi(boolean $IsOpenApi) 设置是否是open api查询
+ * @method string getInstanceId() 获取集群实例名称
+ * @method void setInstanceId(string $InstanceId) 设置集群实例名称
  */
-class DescribeInstanceRequest extends AbstractModel
+class DescribeInstanceStateRequest extends AbstractModel
 {
     /**
-     * @var string 集群实例ID
+     * @var string 集群实例名称
      */
     public $InstanceId;
 
     /**
-     * @var boolean 是否是open api查询
-     */
-    public $IsOpenApi;
-
-    /**
-     * @param string $InstanceId 集群实例ID
-     * @param boolean $IsOpenApi 是否是open api查询
+     * @param string $InstanceId 集群实例名称
      */
     function __construct()
     {
@@ -56,10 +48,6 @@ class DescribeInstanceRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
-        }
-
-        if (array_key_exists("IsOpenApi",$param) and $param["IsOpenApi"] !== null) {
-            $this->IsOpenApi = $param["IsOpenApi"];
         }
     }
 }
